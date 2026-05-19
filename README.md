@@ -1,6 +1,6 @@
 # Digital Watermarking dengan Kompresi JPEG dari Scratch
 
-Implementasi penyisipan watermark pada foto wajah menggunakan kompresi JPEG yang dibangun dari scratch (tanpa library JPEG bawaan). Evaluasi ketahanan watermark terhadap berbagai nilai Quality Factor (QF).
+Implementasi penyisipan watermark pada foto wajah menggunakan kompresi JPEG yang dibangun dari scratch. Evaluasi ketahanan watermark terhadap berbagai nilai Quality Factor (QF).
 
 ---
 
