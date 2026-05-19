@@ -346,6 +346,22 @@ if __name__ == '__main__':
         print("=> Watermark tetap terekstrak pada semua QF yang diuji.")
 
     # ============================================================
+    # SIMPAN GAMBAR PER LANGKAH (untuk README)
+    # ============================================================
+    plt.imsave('img_step1_original.jpg', original)
+
+    wm_display = (wm + 1) / 2   # {-1,+1} → [0,1]
+    plt.imsave('img_step2_watermark.png', wm_display, cmap='gray', vmin=0, vmax=1)
+    plt.imsave('img_step2_watermarked.jpg', marked)
+
+    for _qf in [100, 40, 10]:
+        plt.imsave(f'img_step3_qf{_qf}.jpg', compressed_at[_qf])
+
+    for _qf in [100, 10]:
+        _wm_est = extract(original, compressed_at[_qf], alpha=ALPHA)
+        plt.imsave(f'img_step4_extracted_qf{_qf}.png', _wm_est, cmap='gray')
+
+    # ============================================================
     # VISUALISASI
     # ============================================================
     SHOWCASE = [100, 70, 40, 10]   # QF yang ditampilkan gambar & ekstraksi
